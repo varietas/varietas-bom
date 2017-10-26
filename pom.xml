@@ -87,6 +87,20 @@
                 <version>${version.vertx.framework}</version>
             </dependency>
             
+            <!-- Finite state maschine framework for plugin life cycle -->
+            <dependency>
+                <groupId>org.squirrelframework</groupId>
+                <artifactId>squirrel-foundation</artifactId>
+                <version>0.3.8</version>
+            </dependency>
+            
+            <!-- Dependency for sending data binary. -->
+            <dependency>
+                <groupId>org.xson</groupId>
+                <artifactId>xson</artifactId>
+                <version>1.0.2</version>
+            </dependency>
+            
             <!-- Dependency for logging with logback -->
             <dependency>
                 <groupId>ch.qos.logback</groupId>
@@ -146,7 +160,7 @@
             <dependency>
                 <groupId>org.assertj</groupId>
                 <artifactId>assertj-core</artifactId>
-                <version>3.4.1</version>
+                <version>3.8.0</version>
                 <scope>test</scope>
             </dependency>
             
