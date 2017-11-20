@@ -101,6 +101,13 @@
                 <version>1.0.2</version>
             </dependency>
             
+            <!-- Dependency for network operations. -->
+            <dependency>
+                <groupId>commons-net</groupId>
+                <artifactId>commons-net</artifactId>
+                <version>3.6</version>
+            </dependency>
+            
             <!-- Dependency for logging with logback -->
             <dependency>
                 <groupId>ch.qos.logback</groupId>
@@ -140,6 +147,31 @@
                 <groupId>com.googlecode.json-simple</groupId>
                 <artifactId>json-simple</artifactId>
                 <version>${version.googlecode.json-simple}</version>
+            </dependency>
+            
+            <!-- Dependency for caching. -->
+            <dependency>
+                <groupId>javax.cache</groupId>
+                <artifactId>cache-api</artifactId>
+                <version>1.0.0</version>
+            </dependency>
+            <dependency>
+                <groupId>org.ehcache</groupId>
+                <artifactId>ehcache</artifactId>
+                <version>3.4.0</version>
+            </dependency>
+            <!-- Dependency for memory measure of Java objetcs. -->
+            <dependency>
+                <groupId>org.ehcache</groupId>
+                <artifactId>sizeof</artifactId>
+                <version>0.3.0</version>
+            </dependency>
+            
+            <!-- Graph library for plugin dependency handling. -->
+            <dependency>
+                <groupId>org.jgrapht</groupId>
+                <artifactId>jgrapht-core</artifactId>
+                <version>1.0.1</version>
             </dependency>
             
             <!-- Dependency for byte code analysis. The internal used asm classes couldn't be used. -->
