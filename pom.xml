@@ -88,6 +88,11 @@
                 <artifactId>vertx-web</artifactId>
                 <version>${version.vertx.framework}</version>
             </dependency>
+            <dependency>
+                <groupId>io.vertx</groupId>
+                <artifactId>vertx-web-api-contract</artifactId>
+                <version>${version.vertx.framework}</version>
+            </dependency>
             <!-- Finite state maschine framework for plugin life cycle -->
             <dependency>
                 <groupId>org.squirrelframework</groupId>
