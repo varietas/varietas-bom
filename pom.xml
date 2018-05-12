@@ -21,6 +21,7 @@
     <name>varietas.io Bill of Materials</name>
     <description>varietas.io Bill of Materials POM</description>
     <url>https://varietas.io</url>
+    <inceptionYear>2017</inceptionYear>
     
     <developers>
         <developer>
@@ -31,7 +32,6 @@
             <roles>
                 <role>Project owner</role>
                 <role>Developer</role>
-                <role>Student</role>
             </roles>
         </developer>
     </developers>
@@ -270,7 +270,7 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-javadoc-plugin</artifactId>
-                        <version>2.10.4</version>
+                        <version>3.0.0</version>
                         <executions>
                             <execution>
                                 <id>attach-javadocs</id>
