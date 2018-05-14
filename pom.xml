@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>io.varietas</groupId>
     <artifactId>varietas-bom</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0</version>
     <packaging>pom</packaging>
     
     <properties>
@@ -28,7 +28,7 @@
             <name>Michael Rhöse</name>
             <email>michael.rhoese@varietas.io</email>
             <organization>varietas.io</organization>
-            <organizationUrl>varietas.io</organizationUrl>
+            <organizationUrl>https://varietas.io</organizationUrl>
             <roles>
                 <role>Project owner</role>
                 <role>Developer</role>
@@ -43,6 +43,12 @@
             <distribution>repo</distribution>
         </license>
     </licenses>
+    
+    <scm>
+        <connection>scm:git@github.com:varietas/varietas-bom.git</connection>
+        <developerConnection>scm:git:git@github.com:varietas/varietas-bom.git</developerConnection>
+        <url>https://github.com/varietas/varietas-bom/tree/master</url>
+    </scm>
     
     <dependencyManagement>
         <dependencies>
