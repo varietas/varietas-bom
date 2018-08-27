@@ -5,24 +5,37 @@
     <artifactId>varietas-bom</artifactId>
     <version>1.0.1</version>
     <packaging>pom</packaging>
-    
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-           
+
         <version.vertx.framework>3.5.1</version.vertx.framework>
         <version.fasterxml.jackson>2.9.5</version.fasterxml.jackson>
         <version.googlecode.json-simple>1.1.1</version.googlecode.json-simple>
         <version.sourceforge.streamsupport>1.5.5</version.sourceforge.streamsupport>
-                
+
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
-    
+
     <name>varietas.io Bill of Materials</name>
-    <description>varietas.io Bill of Materials POM</description>
+    <description>varietas.io BOM and parent POM</description>
     <url>https://varietas.io</url>
+
     <inceptionYear>2017</inceptionYear>
-    
+
+    <contributors>
+        <contributor>
+            <name>Michael Rhöse</name>
+            <email>michael.rhoese@varietas.io</email>
+            <organization>varietas.io</organization>
+            <organizationUrl>https://varietas.io</organizationUrl>
+            <roles>
+                <role>Founder</role>
+            </roles>
+        </contributor>
+    </contributors>
+
     <developers>
         <developer>
             <name>Michael Rhöse</name>
@@ -43,13 +56,13 @@
             <distribution>repo</distribution>
         </license>
     </licenses>
-    
+
     <scm>
         <connection>scm:git@github.com:varietas/varietas-bom.git</connection>
         <developerConnection>scm:git:git@github.com:varietas/varietas-bom.git</developerConnection>
         <url>https://github.com/varietas/varietas-bom/tree/master</url>
     </scm>
-    
+
     <dependencyManagement>
         <dependencies>
             <!-- Event bus and reactiv framework -->
@@ -88,33 +101,33 @@
                 <artifactId>vertx-web-api-contract</artifactId>
                 <version>${version.vertx.framework}</version>
             </dependency>
-            
+
             <!-- Dependency for sending data binary. -->
             <dependency>
                 <groupId>org.xson</groupId>
                 <artifactId>xson</artifactId>
                 <version>1.0.2</version>
             </dependency>
-            
+
             <!-- Dependency for network operations. -->
             <dependency>
                 <groupId>commons-net</groupId>
                 <artifactId>commons-net</artifactId>
                 <version>3.6</version>
             </dependency>
-            
+
             <!-- Dependency for logging with logback -->
             <dependency>
                 <groupId>ch.qos.logback</groupId>
                 <artifactId>logback-classic</artifactId>
                 <version>1.2.3</version>
             </dependency>
-            <dependency>                                    
-                <groupId>org.slf4j</groupId>                
-                <artifactId>jcl-over-slf4j</artifactId>     
-                <version>1.7.25</version>  
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>jcl-over-slf4j</artifactId>
+                <version>1.7.25</version>
             </dependency>
-            
+
             <!-- Framework to reducing boilerplate code -->
             <dependency>
                 <groupId>org.projectlombok</groupId>
@@ -122,7 +135,7 @@
                 <version>1.16.20</version>
                 <scope>provided</scope>
             </dependency>
-            
+
             <dependency>
                 <groupId>com.fasterxml.jackson.core</groupId>
                 <artifactId>jackson-core</artifactId>
@@ -143,7 +156,7 @@
                 <artifactId>json-simple</artifactId>
                 <version>${version.googlecode.json-simple}</version>
             </dependency>
-            
+
             <!-- Dependency for caching. -->
             <dependency>
                 <groupId>javax.cache</groupId>
@@ -161,28 +174,28 @@
                 <artifactId>sizeof</artifactId>
                 <version>0.3.0</version>
             </dependency>
-            
+
             <!-- Graph library for plugin dependency handling. -->
             <dependency>
                 <groupId>org.jgrapht</groupId>
                 <artifactId>jgrapht-core</artifactId>
                 <version>1.1.0</version>
             </dependency>
-            
+
             <!-- Dependency for byte code analysis. The internal used asm classes couldn't be used. -->
             <dependency>
                 <groupId>io.github.lukehutch</groupId>
                 <artifactId>fast-classpath-scanner</artifactId>
                 <version>2.21</version>
             </dependency>
-            
+
             <!-- Dependency for YAML file parsing. YAML is the prefered format for config files within varietas. -->
             <dependency>
                 <groupId>org.yaml</groupId>
                 <artifactId>snakeyaml</artifactId>
                 <version>1.21</version>
             </dependency>
-            
+
             <dependency>
                 <groupId>org.raml</groupId>
                 <artifactId>raml-parser-2</artifactId>
@@ -194,7 +207,7 @@
                     </exclusion>
                 </exclusions>
             </dependency>
-            
+
             <!-- Test dependencies -->
             <dependency>
                 <groupId>org.assertj</groupId>
@@ -202,7 +215,7 @@
                 <version>3.9.1</version>
                 <scope>test</scope>
             </dependency>
-            
+
             <!-- Embedded MongoDB for development only! Later change scope to test! -->
             <dependency>
                 <groupId>de.flapdoodle.embed</groupId>
@@ -210,14 +223,14 @@
                 <version>2.0.3</version>
                 <scope>test</scope>
             </dependency>
-            
+
             <dependency>
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>
                 <version>4.12</version>
                 <scope>test</scope>
             </dependency>
-            
+
             <dependency>
                 <groupId>com.jayway.restassured</groupId>
                 <artifactId>rest-assured</artifactId>
@@ -226,7 +239,7 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-    
+
     <distributionManagement>
         <snapshotRepository>
             <id>ossrh</id>
@@ -237,10 +250,10 @@
             <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
         </repository>
     </distributionManagement>
-    
+
     <profiles>
         <profile>
-            <id>release</id>    
+            <id>release</id>
             <build>
                 <plugins>
                     <plugin>
@@ -283,7 +296,7 @@
                             </execution>
                         </executions>
                     </plugin>
-            
+
                     <plugin>
                         <groupId>org.sonatype.plugins</groupId>
                         <artifactId>nexus-staging-maven-plugin</artifactId>
@@ -299,7 +312,7 @@
             </build>
         </profile>
     </profiles>
-    
+
     <build>
         <plugins>
             <plugin>
@@ -312,6 +325,38 @@
                     <releaseProfiles>release</releaseProfiles>
                     <goals>deploy</goals>
                 </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.apache.maven.scm</groupId>
+                        <artifactId>maven-scm-provider-git-commons</artifactId>
+                        <version>1.10.0</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.apache.maven.scm</groupId>
+                        <artifactId>maven-scm-api</artifactId>
+                        <version>1.10.0</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+            <!-- JaCoCo plugin will be moved to parent pom in future because it will be used in all Java-based artifacts -->
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <version>0.8.1</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>prepare-agent</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>report</id>
+                        <phase>prepare-package</phase>
+                        <goals>
+                            <goal>report</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
