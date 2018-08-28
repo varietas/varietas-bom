@@ -3,14 +3,14 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>io.varietas</groupId>
     <artifactId>varietas-bom</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <packaging>pom</packaging>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <version.vertx.framework>3.5.1</version.vertx.framework>
-        <version.fasterxml.jackson>2.9.5</version.fasterxml.jackson>
+        <version.fasterxml.jackson>2.9.6</version.fasterxml.jackson>
         <version.googlecode.json-simple>1.1.1</version.googlecode.json-simple>
         <version.sourceforge.streamsupport>1.5.5</version.sourceforge.streamsupport>
 
@@ -179,14 +179,14 @@
             <dependency>
                 <groupId>org.jgrapht</groupId>
                 <artifactId>jgrapht-core</artifactId>
-                <version>1.1.0</version>
+                <version>1.2.0</version>
             </dependency>
 
             <!-- Dependency for byte code analysis. The internal used asm classes couldn't be used. -->
             <dependency>
                 <groupId>io.github.lukehutch</groupId>
                 <artifactId>fast-classpath-scanner</artifactId>
-                <version>2.21</version>
+                <version>3.1.15</version>
             </dependency>
 
             <!-- Dependency for YAML file parsing. YAML is the prefered format for config files within varietas. -->
@@ -199,7 +199,7 @@
             <dependency>
                 <groupId>org.raml</groupId>
                 <artifactId>raml-parser-2</artifactId>
-                <version>1.0.20</version>
+                <version>1.0.25</version>
                 <exclusions>
                     <exclusion>
                         <groupId>org.yaml</groupId>
@@ -212,7 +212,7 @@
             <dependency>
                 <groupId>org.assertj</groupId>
                 <artifactId>assertj-core</artifactId>
-                <version>3.9.1</version>
+                <version>3.11.0</version>
                 <scope>test</scope>
             </dependency>
 
@@ -220,7 +220,7 @@
             <dependency>
                 <groupId>de.flapdoodle.embed</groupId>
                 <artifactId>de.flapdoodle.embed.mongo</artifactId>
-                <version>2.0.3</version>
+                <version>2.1.1</version>
                 <scope>test</scope>
             </dependency>
 
