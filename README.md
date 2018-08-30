@@ -9,6 +9,20 @@ The consistently code building, testing and improving lead us to a common BOM/Pa
 * **JaCoCo** - Code Coverage
 * **SpotBugs** - Bug Analysis
 
+### Usage
+
+Include the following code into your POM file:
+
+```xml
+<parent>
+    <groupId>io.varietas</groupId>
+    <artifactId>varietas-bom</artifactId>
+    <version>y.x.z</version>
+</parent>
+```
+
+Replace `x.y.z` with the currently newest version released [here](g:io.varietas AND a:varietas-bom).
+
 #### Ticket
 
 The ticket handling is separated into a "background" and an issue ticket-system. Tickets for improvements, features and suggestions are located on the project [Workboard](https://team.varietas.io/project/view/1/). Issues of the project are located in the repository Issues.
