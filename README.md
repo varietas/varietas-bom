@@ -21,7 +21,7 @@ Include the following code into your POM file:
 </parent>
 ```
 
-Replace `x.y.z` with the currently newest version released [here](g:io.varietas AND a:varietas-bom).
+Replace `x.y.z` with the currently newest version released [here](https://search.maven.org/artifact/io.varietas/varietas-bom/).
 
 #### Ticket
 
