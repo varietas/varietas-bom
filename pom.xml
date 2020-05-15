@@ -10,7 +10,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <version.vertx.framework>3.8.0</version.vertx.framework>
-        <version.fasterxml.jackson>2.9.9</version.fasterxml.jackson>
+        <version.fasterxml.jackson>2.11.0</version.fasterxml.jackson>
         <version.googlecode.json-simple>1.1.1</version.googlecode.json-simple>
         <version.sourceforge.streamsupport>1.5.5</version.sourceforge.streamsupport>
 
